@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="We provide the best food and healthiest recepies, delivered right on your doorstep.">
+  <meta name="keywords" content="healthy, superfood, food delivery, smoothie, salad, food box">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>How To Match: Food & Wine</title>
+</head>
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-leaf"></i>Good</span>Full
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+<!-- Blog Post -->
+  <main>
+    <section class="post">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+       <i class="fas fa-user"></i> Posted by <strong>John Doe</strong> | June 18 2020
+     </p>
+     <img src="images/blog/blog1.jpg" alt="">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro laborum corporis quas harum reprehenderit commodi facere culpa aperiam vero nobis!</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ratione recusandae perferendis, deleniti unde consectetur. Quos accusamus voluptate minus rerum ipsam repellat quis distinctio, deleniti eveniet, in quaerat vel illo facere aperiam id? Molestias quaerat at molestiae magnam assumenda, obcaecati deserunt cumque? Incidunt quisquam praesentium sunt tenetur natus similique tempora quas, architecto voluptate eius tempore. Maxime praesentium asperiores accusamus sint?</p>
+   </section>
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 - GoodFull</p>
+  </footer>
+  <script   src="https://code.jquery.com/jquery-3.5.1.min.js"   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="   crossorigin="anonymous"></script>
+  <script>
+    const navbar = document.getElementById("navbar");
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if(window.pageYOffset > 100){
+        navbar.classList.remove('top');
+        if(!scrolled){
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0px)';
+          scrolled = true
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+
+    /* Smooth Scrolling */
+    $('#navbar a, .btn').on('click', function (e) {
+      if(this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top -70,
+          },
+          800
+        );
+      }
+    });
+
+  </script>
+
+</body>
+</html>
