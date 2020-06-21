@@ -74,12 +74,21 @@ img {
   font-weight: 400;
 }
 
+.hero.admin .navbar {
+  background: transparent;
+}
+
 /* Header */
 .hero {
   background: url(../images/home/showcase.jpg) no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: #333;
+}
+
+.hero.admin {
+  background: url(../images/admin/admin.jpg) no-repeat center center/cover;
+  height: 30vh;
 }
 
 .hero.blog {
@@ -225,7 +234,36 @@ img {
 }
 
 .footer .social > * {
-  margin: 15px;
+  margin: 30px;
+}
+
+/* Admin */
+.orders h2 {
+  padding: 0 20px;
+  border-bottom: 1.5px solid #333;
+}
+
+.order-div {
+  background: #fff;
+  margin: 5px 15px;
+  border: 1px solid #ccc;
+  text-align: start;
+}
+
+.order-div h3 {
+  font-size: 1.25rem;
+}
+
+.order-div span {
+  font-weight: 900;
+}
+
+.order-div .btn {
+  width: 100%;
+}
+
+.order-div .btn:hover {
+  background: #eee;
 }
 
 /* Mobile */

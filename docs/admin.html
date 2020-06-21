@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="NOINDEX, NOFOLLOW">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>GoodFull Admin</title>
+  <script src="orders.js"></script>
+</head>
+<body class="bg-light">
+  <header class="hero admin">
+    <div id="navbar" class="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-leaf"></i>Good</span>Full
+      </h1>
+    </div>
+    <div class="content">
+      <h1>Admin</h1>
+    </div>
+  </header>
+
+<!-- Orders -->
+  <main>
+    <section class="orders">
+      <header class="section-header">
+      <h2>Orders</h2>
+    </header>
+    <div class="row">
+      <div id="orders-list" class="orders-list flex-items">
+        <!-- JS generated content -->
+      </div>
+    </div>
+    </section>
+  </main>
+
+<script>
+  
+  renderOrderList();
+
+  window.addEventListener("storage", function(event){
+    if (event.key === "orderList"){
+        renderOrderList();
+    }
+});
+</script>
+</body>
+</html>

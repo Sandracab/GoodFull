@@ -39,6 +39,13 @@ border-radius: 30px;
   border: #fff solid 1px;
 }
 
+.btn-outline-light {
+  background: transparent;
+  border: #333 solid 1px;
+  padding: 5px 20px;
+  color: #333;
+}
+
 /* Flex Items */
 .flex-items {
   display: flex;
